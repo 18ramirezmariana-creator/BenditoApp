@@ -26,18 +26,22 @@ def load_page(page_name):
             
             /* Definición de Variables de Color */
             :root {
-                --color-titulo-principal: #6C13BF; /* Morado/Violeta - Usado para título, borde de resumen, texto de resumen fuerte. */
+                --color-titulo-principal: #0c2c91; /* Azul - Usado para título, borde de resumen, texto de resumen fuerte. */
                 --color-fondo-input: #f7f7fb;     /* Gris muy claro/Blanquecino - Usado para fondo de campos de input y selectbox. */
                 --color-texto-labels-botones: #0B0B19; /* Negro muy oscuro - Usado para color de labels, texto de resumen normal, y fondo de botón. */
-                --color-fondo-resumen: #f0e6ff;   /* Lavanda muy claro - Usado para fondo del contenedor de resumen. */
+                --color-fondo-resumen: #e6ebf7;   /* Lavanda muy claro - Usado para fondo del contenedor de resumen. */
                 --color-texto-input-botones: white; /* Blanco - Usado para texto/símbolos de botones de input (+/-) y texto de botón principal. */
             }
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700;900&display=swap');
 
             .main-title {
+                font-family: 'Kanit', sans-serif; /* Aplicar la nueva tipografía */
                 text-align: center;
-                font-size: 36px;
-                color: var(--color-titulo-principal); /* #6C13BF */
-                font-weight: 700;
+                font-size: 42px; /* Un poco más grande para que destaque */
+                color: var(--color-titulo-principal);
+                font-weight: 900;
+                text-transform: uppercase; /* Opcional: en mayúsculas se parece más al logo */
+                letter-spacing: -1px; /* Reduce un poco el espacio entre letras para un look más deportivo */
                 margin-bottom: 50px;
             }
 
@@ -53,6 +57,7 @@ def load_page(page_name):
                 display: flex !important;
                 align-items: center !important;
             }
+                    
 
             /* Number Input - Campo de texto */
             .stNumberInput input {
@@ -164,7 +169,7 @@ def load_page(page_name):
     """, unsafe_allow_html=True)
 
         # Título centrado
-        st.markdown('<div class="main-title">🏆 Padel App</div>', unsafe_allow_html=True)
+        st.markdown('<div class="main-title">🏆 Bendito Padel App</div>', unsafe_allow_html=True)
 
         c1,c2 = st.columns(2)
         mixto = False
